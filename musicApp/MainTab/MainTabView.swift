@@ -16,14 +16,7 @@ struct MainTabView: View {
             
             if (selecTab == 0) {
                
-                VStack {
-                        Spacer()
-                        Text("Home")
-                            .foregroundColor(.primaryText)
-                        Spacer()
-                    }
-                    .frame(width: .screenWidth, height: .screenHeight)
-                    .background(Color.bg)
+               HomeView()
                 
             } else if (selecTab == 1) {
                

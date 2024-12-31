@@ -16,7 +16,7 @@ struct musicAppApp: App {
                 MainTabView()
 
             }
-           
+            .navigationViewStyle(/*@START_MENU_TOKEN@*//*@PLACEHOLDER=Navigation View Style@*/DefaultNavigationViewStyle()/*@END_MENU_TOKEN@*/)
         }
     }
 }
