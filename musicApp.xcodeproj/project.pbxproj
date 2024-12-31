@@ -16,6 +16,9 @@
 		F0289A5A2D22DADE00377BF9 /* TabButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0289A592D22DADD00377BF9 /* TabButton.swift */; };
 		F0289A5C2D22EBD500377BF9 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0289A5B2D22EBD500377BF9 /* HomeView.swift */; };
 		F0289A5E2D22F54200377BF9 /* ViewAllSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0289A5D2D22F54200377BF9 /* ViewAllSection.swift */; };
+		F0E5A3632D2465E600F45528 /* SideMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0E5A3622D2465E600F45528 /* SideMenuView.swift */; };
+		F0E5A3652D247C2F00F45528 /* IconTextRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0E5A3642D247C2F00F45528 /* IconTextRow.swift */; };
+		F0E5A3672D247CF200F45528 /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0E5A3662D247CF200F45528 /* MainViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +37,9 @@
 		F0289A592D22DADD00377BF9 /* TabButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabButton.swift; sourceTree = "<group>"; };
 		F0289A5B2D22EBD500377BF9 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		F0289A5D2D22F54200377BF9 /* ViewAllSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewAllSection.swift; sourceTree = "<group>"; };
+		F0E5A3622D2465E600F45528 /* SideMenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuView.swift; sourceTree = "<group>"; };
+		F0E5A3642D247C2F00F45528 /* IconTextRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IconTextRow.swift; sourceTree = "<group>"; };
+		F0E5A3662D247CF200F45528 /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,6 +121,7 @@
 				F0289A532D22B4AD00377BF9 /* UIExtension.swift */,
 				F0289A592D22DADD00377BF9 /* TabButton.swift */,
 				F0289A5D2D22F54200377BF9 /* ViewAllSection.swift */,
+				F0E5A3642D247C2F00F45528 /* IconTextRow.swift */,
 			);
 			path = UICommon;
 			sourceTree = "<group>";
@@ -129,6 +136,7 @@
 		F0289A4F2D22B33100377BF9 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				F0E5A3662D247CF200F45528 /* MainViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -152,6 +160,7 @@
 			isa = PBXGroup;
 			children = (
 				F0289A572D22C48600377BF9 /* MainTabView.swift */,
+				F0E5A3622D2465E600F45528 /* SideMenuView.swift */,
 			);
 			path = MainTab;
 			sourceTree = "<group>";
@@ -228,11 +237,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				F0289A5E2D22F54200377BF9 /* ViewAllSection.swift in Sources */,
+				F0E5A3632D2465E600F45528 /* SideMenuView.swift in Sources */,
+				F0E5A3652D247C2F00F45528 /* IconTextRow.swift in Sources */,
 				F0289A542D22B4AD00377BF9 /* UIExtension.swift in Sources */,
 				F0289A5C2D22EBD500377BF9 /* HomeView.swift in Sources */,
 				F0289A5A2D22DADE00377BF9 /* TabButton.swift in Sources */,
 				F0289A392D22AEF600377BF9 /* musicAppApp.swift in Sources */,
 				F0289A582D22C48600377BF9 /* MainTabView.swift in Sources */,
+				F0E5A3672D247CF200F45528 /* MainViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

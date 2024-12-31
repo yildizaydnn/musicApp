@@ -9,6 +9,8 @@ import SwiftUI
 
 struct HomeView: View {
 
+    @StateObject var mainVM = MainViewModel.share
+    
     @State var txtSearch: String = ""
     @State var hostRecommendedArr = [
         [
@@ -146,7 +148,7 @@ struct HomeView: View {
                         
                         HStack{
                             Button{
-                                
+                               
                             }label: {
                                 Image("play_btn")
                                     .resizable()
@@ -201,7 +203,8 @@ struct HomeView: View {
             VStack {
                 HStack {
                     Button {
-                        
+                        print("open menu")
+                        mainVM.isShowMenu = true
                     } label: {
                         Image("menu")
                             .resizable()

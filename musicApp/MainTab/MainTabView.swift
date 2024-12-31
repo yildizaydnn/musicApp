@@ -8,18 +8,19 @@
 import SwiftUI
 
 struct MainTabView: View {
-    
-    @State var selecTab: Int = 0
+  
+    @StateObject var mainVM = MainViewModel.share
+
     
     var body: some View {
         ZStack {
             
-            if (selecTab == 0) {
-               
-               HomeView()
+            if (mainVM.selecTab == 0) {
                 
-            } else if (selecTab == 1) {
-               
+                HomeView()
+                
+            } else if (mainVM.selecTab == 1) {
+                
                 VStack {
                     Spacer()
                     Text("Songs")
@@ -28,8 +29,8 @@ struct MainTabView: View {
                 }
                 .frame(width: .screenWidth, height: .screenHeight)
                 .background(Color.bg)
-            } else if (selecTab == 2) {
-               
+            } else if (mainVM.selecTab == 2) {
+                
                 VStack {
                     Spacer()
                     Text("Settings")
@@ -47,41 +48,46 @@ struct MainTabView: View {
                     Spacer()
                     
                     TabButton(title: "Home", icon: "home_tab",
-                              iconUnfocus: "home_tab_un", isSelect: selecTab == 0) {
-                        selecTab = 0
+                              iconUnfocus: "home_tab_un", isSelect: mainVM.selecTab == 0) {
+                        mainVM.selecTab = 0
                     }
                     
                     Spacer()
                     
                     TabButton(title: "Songs", icon: "songs_tab",
-                              iconUnfocus: "songs_tab_un", isSelect: selecTab == 1) {
-                        selecTab = 1
+                              iconUnfocus: "songs_tab_un", isSelect: mainVM.selecTab == 1) {
+                        mainVM.selecTab = 1
                     }
                     
                     Spacer()
                     
                     TabButton(title: "Settings", icon: "setting_tab",
-                              iconUnfocus: "setting_tab_un", isSelect: selecTab == 2) {
-                        selecTab = 2
+                              iconUnfocus: "setting_tab_un", isSelect: mainVM.selecTab == 2) {
+                        mainVM.selecTab = 2
                     }
                     
                     Spacer()
                 }
-                .padding(.top, 10)  // Adjust the bottom padding
-                .padding(.bottom, .bottomInsets)
-                .background(Color.bg)
-                .shadow(radius: 2)
-            }
-            .navigationTitle("")
-            .navigationBarBackButtonHidden()
-            .navigationBarHidden(true)
-            .ignoresSafeArea()
-        }
-    }
-}
+                              .padding(.top, 10)
+                              .padding(.bottom, .bottomInsets)
+                              .background(Color.bg)
+                              .shadow(radius: 5)
+                          }
+                          
+               SideMenuView(isShowing: $mainVM.isShowMenu)
+                          
+                      }
+                      .frame(width: .screenWidth, height: .screenHeight)
+                      .background(Color.bg)
+                      .navigationTitle("")
+                      .navigationBarBackButtonHidden()
+                      .navigationBarHidden(true)
+                      .ignoresSafeArea()
+                  }
+              }
 
-struct MainTabView_Previews: PreviewProvider {
-    static var previews: some View {
-        MainTabView()
-    }
-}
+              struct MainTabView_Previews: PreviewProvider {
+                  static var previews: some View {
+                      MainTabView()
+                  }
+              }
